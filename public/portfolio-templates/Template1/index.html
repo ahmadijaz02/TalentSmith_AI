@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- The title will be dynamically set -->
+    <title id="page-title">Portfolio</title>
+
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ======================= HERO SECTION ======================= -->
+    <section id="hero" class="hero-section">
+        
+        <!-- This div creates the animated background -->
+        <div id="hero-animated-background"></div>
+
+        <!-- This main container holds all visible content -->
+        <div class="hero-content">
+
+            <!-- 1. TEXT CONTENT (LEFT SIDE) -->
+            <div class="hero-text-content">
+                <p class="hero-greeting">I'm</p>
+                <h1 id="hero-name"></h1> <!-- To be filled by JS -->
+                <p id="hero-title"></p>   <!-- To be filled by JS -->
+                
+                <div class="hero-buttons-container">
+                    <a href="#projects" id="hero-cta-button" class="cta-button">Explore My Work</a>
+                    <a href="#" id="hero-cv-button" class="cta-button secondary">Download CV</a>
+                </div>
+            </div>
+
+            <!-- 2. IMAGE CONTENT (RIGHT SIDE) -->
+            <div class="hero-image-container">
+                <div class="image-background-splash"></div>
+                <img id="hero-image" src="" alt="Profile Picture">
+            </div>
+
+        </div>
+        
+    </section>
+    <!-- ======================= END HERO SECTION ======================= -->
+
+    <!-- ======================= ADDED: STICKY NAVIGATION BAR ======================= -->
+    <nav id="main-nav">
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+              <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <!-- ======================= END NAVIGATION BAR ======================= -->
+    
+ <!-- ======================= REVISED: ABOUT ME SECTION ======================= -->
+    <section id="about" class="content-section">
+        <div class="about-container">
+            <!-- MODIFIED: Added the animation class to this container -->
+            <div class="about-image-container animate-on-scroll">
+                <img id="about-image" src="" alt="About Me Image">
+            </div>
+            <div class="about-text-container">
+                <h2 id="about-heading" class="animate-on-scroll"></h2>
+                <p id="about-text" class="animate-on-scroll"></p>
+                 <div id="about-details-container" class="animate-on-scroll"></div>
+            </div>
+        </div>
+    </section>
+    <!-- ======================= END ABOUT ME SECTION ======================= -->
+    <!-- ======================= SKILLS SECTION ======================= -->
+    <section id="skills" class="content-section">
+        <h2 id="skills-heading" class="animate-on-scroll">Technical Skills</h2>
+        <div id="skills-grid-container" class="animate-on-scroll">
+            <!-- Skill cards will be dynamically inserted here by JavaScript -->
+        </div>
+    </section>
+    <!-- ======================= END SKILLS SECTION ======================= -->
+  <!-- ======================= SERVICES SECTION ======================= -->
+<section id="services" class="content-section">
+    <h2 id="services-heading" class="animate-on-scroll">What I Offer</h2>
+    <div id="services-grid-container" class="animate-on-scroll">
+        <!-- Service cards will be dynamically inserted here by JavaScript -->
+    </div>
+</section>
+<!-- ======================= END SERVICES SECTION ======================= -->
+    
+ <!-- ======================= PROJECTS SECTION ======================= -->
+<section id="projects" class="content-section">
+    <h2 id="projects-heading" class="animate-on-scroll">Featured Projects</h2>
+    <div class="projects-container animate-on-scroll">
+        <div class="project-stack">
+            <div id="projects-grid-container">
+                <!-- Project cards will be dynamically inserted here by JavaScript -->
+            </div>
+        </div>
+        <div class="project-details-panel">
+            <div class="project-preview">
+                <div class="preview-header">
+                    <h3 id="preview-title">Select a Project</h3>
+                    <div class="preview-status">
+                        <span id="preview-status-text">Ready to Explore</span>
+                    </div>
+                </div>
+                <div class="preview-content">
+                    <div class="preview-image-container">
+                        <img id="preview-image" src="" alt="Project Preview">
+                        <div class="image-overlay">
+                            <div class="tech-badges" id="preview-tech-badges">
+                                <!-- Tech badges will be inserted here -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="preview-description">
+                        <p id="preview-description-text">Hover over a project card to see details here.</p>
+                    </div>
+                    <div class="preview-actions">
+                        <a href="#" id="preview-demo-link" class="preview-button primary" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            Live Demo
+                        </a>
+                        <a href="#" id="preview-code-link" class="preview-button secondary" target="_blank">
+                            <i class="fab fa-github"></i>
+                            Source Code
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ======================= END PROJECTS SECTION ======================= -->
+ <!-- ======================= CONTACT SECTION ======================= -->
+<section id="contact" class="content-section">
+    <h2 id="contact-heading" class="animate-on-scroll">Get In Touch</h2>
+    <div class="contact-container animate-on-scroll">
+        <div class="contact-info-panel">
+            <div class="contact-intro">
+                <h3>Let's Create Something Amazing Together</h3>
+                <p>Ready to bring your ideas to life? I'm here to help you build exceptional digital experiences.</p>
+            </div>
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <div class="contact-icon-container">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Email Me</h4>
+                        <p id="contact-email">your.email@example.com</p>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <div class="contact-icon-container">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Call Me</h4>
+                        <p id="contact-phone">+92 XXX XXXXXXX</p>
+                    </div>
+                </div>
+                <div class="contact-method">
+                    <div class="contact-icon-container">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Location</h4>
+                        <p id="contact-location">Islamabad, Pakistan</p>
+                    </div>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-link" id="social-github">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="social-link" id="social-linkedin">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="social-link" id="social-twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-link" id="social-instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="contact-form-panel">
+            <form class="contact-form" id="contact-form">
+                <div class="form-group">
+                    <input type="text" id="contact-name" name="name" required>
+                    <label for="contact-name">Your Name</label>
+                    <div class="form-border"></div>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="contact-user-email" name="email" required>
+                    <label for="contact-user-email">Your Email</label>
+                    <div class="form-border"></div>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="contact-subject" name="subject" required>
+                    <label for="contact-subject">Subject</label>
+                    <div class="form-border"></div>
+                </div>
+                <div class="form-group">
+                    <textarea id="contact-message" name="message" rows="5" required></textarea>
+                    <label for="contact-message">Your Message</label>
+                    <div class="form-border"></div>
+                </div>
+                <button type="submit" class="submit-button">
+                    <span class="button-text">Send Message</span>
+                    <div class="button-glow"></div>
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- ======================= END CONTACT SECTION ======================= -->
+ <!-- ======================= FOOTER SECTION ======================= -->
+<section id="footer" class="content-section">
+    <div id="footer-main-container">
+        <!-- Left Orbital Section -->
+        <div class="footer-orbital-section">
+            <div class="orbital-center">
+                <i class="fas fa-rocket"></i>
+                <div class="orbit-ring">
+                    <div class="orbit-dot"></div>
+                </div>
+                <div class="orbit-ring">
+                    <div class="orbit-dot"></div>
+                </div>
+            </div>
+            <div class="footer-brand-text">
+                <div class="footer-brand-name" id="footer-brand-name">Nadeem Ahmad</div>
+                <div class="footer-brand-tagline">Crafting Digital Excellence</div>
+            </div>
+        </div>
+
+        <!-- Center Links Section -->
+        <div class="footer-center-section">
+            <div class="footer-links-group">
+                <h4 class="footer-links-title">Navigation</h4>
+                <ul class="footer-links-list">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#services">Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group">
+                <h4 class="footer-links-title">Projects</h4>
+                <ul class="footer-links-list">
+                    <li><a href="#projects">Portfolio</a></li>
+                    <li><a href="#" id="footer-github-link">GitHub</a></li>
+                    <li><a href="#" id="footer-resume-link">Resume</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group">
+                <h4 class="footer-links-title">Services</h4>
+                <ul class="footer-links-list">
+                    <li><a href="#services">Web Development</a></li>
+                    <li><a href="#services">App Development</a></li>
+                    <li><a href="#services">UI/UX Design</a></li>
+                    <li><a href="#services">AI Solutions</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Right Contact Section -->
+        <div class="footer-contact-section">
+            <h4 class="footer-contact-title">Connect</h4>
+            <div class="footer-social-links">
+                <a href="#" class="footer-social-link" id="footer-social-github">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="footer-social-link" id="footer-social-linkedin">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" class="footer-social-link" id="footer-social-twitter">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="footer-social-link" id="footer-social-instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+            <div class="footer-contact-info">
+                <p id="footer-email">onedaysuccussfull@gmail.com</p>
+                <p id="footer-location">Faislabad, Pakistan</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div id="footer-bottom-section">
+        <div class="footer-copyright">
+            <p>&copy; <span id="footer-current-year">2024</span> <span id="footer-copyright-name">Nadeem Ahmad</span>. All rights reserved.</p>
+        </div>
+        <a href="#hero" class="footer-back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+</section>
+<!-- ======================= END FOOTER SECTION ======================= -->
+
+    <!-- Link to the JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
